@@ -22,4 +22,7 @@ export class Post {
 
   @Column({ default: 0 })
   downvotes: number;
+
+  @Column({ nullable: true })
+  images: string;
 }

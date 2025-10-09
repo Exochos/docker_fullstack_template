@@ -14,7 +14,7 @@ import { PostController } from './post/post.controller';
       password: 'password',
       database: 'postgres',
       entities: [Post],
-      synchronize: true,
+      synchronize: false,
     }),
     TypeOrmModule.forFeature([Post]),
   ],

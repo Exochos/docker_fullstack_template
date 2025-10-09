@@ -13,14 +13,19 @@ services:
 
   frontend:
     build: ./frontend
-    container_name: frontend
+    command: npm run dev -- --host 0.0.0.0
     ports:
       - "3000:3000"
-    depends_on:
-      - backend
-    environment:
-      - REACT_APP_API_URL=http://backend:3001
-    command: npm run dev -- --host 0.0.0.0
+    develop:
+      watch:
+        - action: sync
+          path: ./frontend
+          target: /app
+          initial_sync: true
+          ignore:
+            - node_modules/
+        - action: rebuild
+          path: ./frontend/package.json
 
   db:
     image: postgres:15
@@ -34,7 +39,8 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./backend/db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+      - ./db/seed.sql:/docker-entrypoint-initdb.d/seed.sql
+
 
 volumes:
   db-data:
