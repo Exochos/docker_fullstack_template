@@ -1,6 +1,3 @@
-/*
-  Initial SQL seed file to populate the database with posts
-*/
 CREATE TABLE IF NOT EXISTS posts (
   id SERIAL PRIMARY KEY,
   title TEXT NOT NULL,
@@ -22,3 +19,8 @@ Attribution for images:
 2. Photo by Karolina Grabowska from Pexels: https://www.pexels.com/photo/11967013/
 3. Photo by Taryn Elliott from Pexels: https://www.pexels.com/photo/4587996/
 */  
+
+INSERT INTO posts (title, content, author, upvotes, downvotes) VALUES
+('First Post', 'content of the first post.', 'user1', 5, 2),
+('Second Post', 'content of the second post.', 'user2', 3, 1),
+('Third Post', 'content of the third post.', 'user3', 8, 0);
