@@ -25,7 +25,7 @@ Warning: this erases all local DB data.
 ## Folder structure:
 ```
 docker_template/
-├── backend/      # NestJS app (Default app with the addition of one get and post route
+├── backend/      # NestJS app (Default app with the addition of one GET and one POST route
 ├── frontend/     # React (Vite + Tailwind + Router v7)
 ├── db/           # Postgres DB seeded with a seed.sql file via docker compose
 └── docker-compose.yml
