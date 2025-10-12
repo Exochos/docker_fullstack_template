@@ -13,19 +13,13 @@ services:
 
   frontend:
     build: ./frontend
+    working_dir: /app
     command: npm run dev -- --host 0.0.0.0
     ports:
       - "3000:3000"
-    develop:
-      watch:
-        - action: sync
-          path: ./frontend
-          target: /app
-          initial_sync: true
-          ignore:
-            - node_modules/
-        - action: rebuild
-          path: ./frontend/package.json
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
 
   db:
     image: postgres:15
