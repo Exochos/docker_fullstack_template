@@ -20,10 +20,11 @@ or global dependencies.
 ```bash
 git clone git@github.com:Exochos/docker_template.git
 cd docker_template
-```
 
 # Build & launch all services
 docker compose up --build
+```
+
 
 Access Points
 Service	URL
