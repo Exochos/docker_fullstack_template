@@ -43,9 +43,10 @@ docker compose down -v # -v wipes the volume to
 docker compose up --build
 
 ⚠️ Warning: This permanently deletes local DB data ⚠️.
-📁 Folder Structure
+
 
 ```
+📁 Folder Structure
 docker_template/
 ├── backend/    	# NestJS + TypeORM (ready API scaffold)
 │   └── src/
