@@ -44,14 +44,16 @@ docker compose up --build
 ⚠️ Warning: This permanently deletes local DB data ⚠️.
 📁 Folder Structure
 
+```
 docker_template/
 ├── backend/    	# NestJS + TypeORM (ready API scaffold)
 │   └── src/
 ├── frontend/   	# React 19 (Vite + Tailwind + Router v7)
 ├── db/         	# seed.sql for initial database population
 └── docker-compose.yml
+```
 
-Tech Stack Overview
+## Tech Stack Overview
 Layer	Technology Used
 Frontend	React 19, Vite, Tailwind, React Router v7
 Backend	NestJS, TypeORM, REST API scaffold
