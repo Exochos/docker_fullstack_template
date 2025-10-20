@@ -21,7 +21,7 @@ const Card = ({ title, content, author, upvotes, downvotes, images }: Post) => {
       <p className="text-gray-600 dark:text-gray-300 flex-grow">{content}</p>
       <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">by {author}</div>
       <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-        ❤️ {upvotes} ⬇️ {downvotes}
+        ⬆️ {upvotes} ⬇️ {downvotes}
       </div>
     </div>
   );
